@@ -29,7 +29,7 @@ int main() {
     cout << "Student: " << student2.getName() << "\nAverage: " << student2.average() << "\nGrade: " << student2.grade() << "\n\n";
 
     
-    CourseGrades courseGrades = CourseGrades::from_file("/users/victorallen/CS420/Assignment02/Assignment02/grades.txt");
+    CourseGrades courseGrades = CourseGrades::from_file("grades.txt");
 
        // Testing average for a specific grade event
     optional<double> avg_grade_event = courseGrades.average(2); // Average for the second grade event
