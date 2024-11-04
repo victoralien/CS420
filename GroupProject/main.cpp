@@ -11,7 +11,7 @@
 using namespace std;
 int main(int argc, const char * argv[]) {
     
-    cout << "Welcome to blackjack!\n";
+    cout << "Welcome to blackjack!\nWOOOOO GAMBLING!!!!\n";
     
     char again = 'y';
     
@@ -27,8 +27,9 @@ int main(int argc, const char * argv[]) {
         
         cout << "Thank you for playing!\nPlay Again? (y/n): ";
         cin >> again;
+        cout << endl;
     }
     
-    cout << "\nGoodbye!";
+    cout << "\nGoodbye!\n";
    
 }
