@@ -24,6 +24,9 @@ ostream& operator<<(ostream& os, const GenericPlayer& player){
         os << (*card) << " ";
     }
     
-    os << "Total: (" << player.getTotal() << ")\n";
+    int total = player.getTotal();
+    if(total > 0){
+        os << "Total: (" << total << ")\n";
+    }
     return os;
 }

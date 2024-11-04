@@ -18,8 +18,8 @@ private:
     string name;
     
 public:
-    GenericPlayer(const string& name = "") : name(name) {};
-    virtual ~GenericPlayer() {};
+    GenericPlayer(const string& name = "") : name(name) {}
+    virtual ~GenericPlayer() {}
     virtual bool isHitting() const = 0;
     bool isBusted() const ;
     void bust() const ;

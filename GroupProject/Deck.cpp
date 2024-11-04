@@ -32,23 +32,32 @@ void Deck::shuffle(){
     cout << "Deck Shuffled...\n";
 }
 
-void Deck::deal(Hand &aHand){
+bool Deck::deal(Hand &aHand){
     if(!cardVector.empty()){
         aHand.add(cardVector.back());
         cardVector.pop_back();
+        return true;
     }
     else{
         cout << "Out of cards to deal.\n";
+        return false;
+        
     }
 }
 
-void Deck::additionalCards(GenericPlayer &aGenericPlayer){
+bool Deck::additionalCards(GenericPlayer &aGenericPlayer){
     while(!aGenericPlayer.isBusted() && aGenericPlayer.isHitting()){
-        deal(aGenericPlayer);
-        cout << aGenericPlayer << "\n";
-        
-        if(aGenericPlayer.isBusted()){
-            aGenericPlayer.bust();
+        if(deal(aGenericPlayer)){
+            cout << aGenericPlayer << "\n";
+            
+            if(aGenericPlayer.isBusted()){
+                aGenericPlayer.bust();
+            }
+        }
+        else{
+            return false;
         }
     }
+    
+    return true;
 }

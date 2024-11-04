@@ -22,8 +22,8 @@ public:
     virtual ~Deck(){}
     void populate();
     void shuffle();
-    void deal(Hand& aHand);
-    void additionalCards(GenericPlayer& aGenericPlayer);
+    bool deal(Hand& aHand);
+    bool additionalCards(GenericPlayer& aGenericPlayer);
 };
 
 #endif

@@ -35,7 +35,7 @@ public:
         HEARTS,
         SPADES
     };
-    Card(RANK rank = ACE, SUIT suit = SPADES, bool isUp = true): rank(rank), suit(suit), isFaceUp(isUp) {};
+    Card(RANK rank = ACE, SUIT suit = SPADES, bool isUp = true): rank(rank), suit(suit), isFaceUp(isUp) {}
     int getValue() const;
     void flip();
     friend ostream& operator<<(ostream& o, const Card& card);

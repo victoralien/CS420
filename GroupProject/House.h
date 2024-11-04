@@ -10,10 +10,10 @@
 #ifndef HOUSE
 #define HOUSE
 
-class House : public GenericPlayer{
+class House : public GenericPlayer {
 public:
-    House(const string& name = "Dealer"): GenericPlayer(name) {};
-    virtual ~House() {};
+    House(const string& name = "Dealer"): GenericPlayer(name) {}
+    virtual ~House() {}
     virtual bool isHitting() const override;
     void flipFirstCard();
 };

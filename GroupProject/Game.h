@@ -23,8 +23,9 @@ private:
     Player player;
 public:
     Game(const string& name);
-    ~Game(){};
+    ~Game(){}
     void play();
+    void resetGame();
 };
 
 

@@ -11,7 +11,7 @@ Hand::Hand(){
     cardVector.reserve(7);
 }
 
-Hand:: ~Hand(){
+Hand::~Hand(){
     clearHand();
 }
 
@@ -39,6 +39,7 @@ int Hand::getTotal() const {
     int total = 0;
     bool hasAce = false;
     
+    // Don't need to keep track bc if you have 2 aces 11 + 11 = 22 , so you only want to count 1 as 11.
     for(auto iter = cardVector.begin(); iter != cardVector.end(); iter++){
         total += (*iter)->getValue();
         if((*iter)->getValue() == Card::ACE){

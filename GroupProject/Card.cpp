@@ -19,8 +19,9 @@ int Card::getValue() const {
 
 ostream& operator<<(ostream& os, const Card& card){
     string SUITS[] = {"C","D","H","S"};
+    string RANK[] = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
     if(card.isFaceUp){
-        os << card.getValue() << SUITS[card.suit];
+        os << RANK[card.rank-1] << SUITS[card.suit];
     }
     else{
         os << "XX";
